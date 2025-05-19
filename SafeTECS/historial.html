@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Historial - SafeTECS</title>
+    <link rel="stylesheet" href="css/historial.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="history-header">
+        <a href="dashboard.html" class="back-btn">
+            <span class="material-icons">arrow_back</span>
+        </a>
+        <h1>Historial</h1>
+        <button id="filterBtn" class="icon-btn">
+            <span class="material-icons">filter_alt</span>
+        </button>
+    </header>
+
+    <!-- Filtros Desplegables -->
+    <div class="filters-dropdown hidden" id="filtersDropdown">
+        <div class="filter-group">
+            <label for="startDate">Desde:</label>
+            <input type="date" id="startDate" class="filter-input">
+        </div>
+        <div class="filter-group">
+            <label for="endDate">Hasta:</label>
+            <input type="date" id="endDate" class="filter-input">
+        </div>
+        <div class="filter-group">
+            <label for="accessType">Tipo:</label>
+            <select id="accessType" class="filter-input">
+                <option value="all">Todos</option>
+                <option value="entry">Entradas</option>
+                <option value="exit">Salidas</option>
+            </select>
+        </div>
+        <div class="filter-actions">
+            <button id="resetFilters" class="btn-outline">Limpiar</button>
+            <button id="applyFilters" class="btn-primary">Aplicar</button>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="history-container">
+        <!-- Estado de Carga -->
+        <div class="loading-state" id="loadingState">
+            <div class="spinner"></div>
+            <p>Cargando historial...</p>
+        </div>
+
+        <!-- Lista de Accesos -->
+        <div class="access-list" id="accessList">
+            <!-- Ejemplo de Item (se generará dinámicamente) -->
+            <div class="access-item success">
+                <div class="access-icon">
+                    <span class="material-icons">login</span>
+                </div>
+                <div class="access-info">
+                    <h3>Entrada - Edificio A</h3>
+                    <p>20 May 2025 · 08:45 AM</p>
+                </div>
+                <span class="access-status">✓</span>
+            </div>
+        </div>
+
+        <!-- Paginación Móvil -->
+        <div class="pagination-mobile">
+            <button id="prevPageMobile" disabled class="btn-icon">
+                <span class="material-icons">chevron_left</span>
+            </button>
+            <span id="pageInfoMobile">Pág. 1/5</span>
+            <button id="nextPageMobile" class="btn-icon">
+                <span class="material-icons">chevron_right</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Modal Exportar -->
+    <div class="modal-overlay hidden" id="exportModal">
+        <div class="modal-content">
+            <h2>Exportar Historial</h2>
+            <p>Selecciona el formato de exportación:</p>
+            <div class="export-options">
+                <button id="exportPDF" class="btn-export">
+                    <span class="material-icons">picture_as_pdf</span>
+                    PDF
+                </button>
+                <button id="exportExcel" class="btn-export">
+                    <span class="material-icons">description</span>
+                    Excel
+                </button>
+            </div>
+            <button id="closeExportModal" class="btn-close">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/historial.js" type="module"></script>
+</body>
+</html>

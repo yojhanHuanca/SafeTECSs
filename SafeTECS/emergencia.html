@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Emergencia - SafeTECS</title>
+    <link rel="stylesheet" href="css/emergency.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="emergency-header">
+        <a href="dashboard.html" class="back-btn">
+            <span class="material-icons">arrow_back</span>
+        </a>
+        <h1>Emergencia</h1>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="emergency-container">
+        <!-- Estado de Emergencia -->
+        <div class="emergency-status" id="emergencyStatus">
+            <div class="status-icon">
+                <span class="material-icons">check_circle</span>
+            </div>
+            <p>Sistema de emergencia listo</p>
+        </div>
+
+        <!-- Botón de Pánico -->
+        <div class="panic-button-container">
+            <button id="panicButton" class="panic-button">
+                <span class="material-icons">emergency</span>
+                <span class="button-text">Botón de Pánico</span>
+            </button>
+            <p class="panic-instructions">
+                Mantén presionado por 3 segundos para activar la emergencia
+            </p>
+        </div>
+
+        <!-- Información de Emergencia -->
+        <div class="emergency-info hidden" id="emergencyInfo">
+            <div class="info-item">
+                <span class="material-icons">location_on</span>
+                <div>
+                    <h3>Tu ubicación</h3>
+                    <p id="userLocation">Obteniendo ubicación...</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <span class="material-icons">access_time</span>
+                <div>
+                    <h3>Tiempo de respuesta</h3>
+                    <p id="responseTime">Calculando...</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <span class="material-icons">security</span>
+                <div>
+                    <h3>Personal alertado</h3>
+                    <p id="staffAlerted">Enviando alertas...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contactos de Emergencia -->
+        <div class="emergency-contacts">
+            <h2>Contactos directos</h2>
+            <div class="contacts-grid">
+                <a href="tel:911" class="contact-card police">
+                    <span class="material-icons">local_police</span>
+                    <span>Policía</span>
+                </a>
+                
+                <a href="tel:066" class="contact-card medical">
+                    <span class="material-icons">medical_services</span>
+                    <span>Médicos</span>
+                </a>
+                
+                <a href="tel:5551234567" class="contact-card security">
+                    <span class="material-icons">security</span>
+                    <span>Seguridad TECS</span>
+                </a>
+                
+                <a href="tel:5557654321" class="contact-card contact">
+                    <span class="material-icons">person</span>
+                    <span>Contacto 1</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Confirmación -->
+    <div class="modal-overlay hidden" id="confirmationModal">
+        <div class="modal-content">
+            <h2>¿Activar emergencia?</h2>
+            <p>Se notificará inmediatamente al personal de seguridad</p>
+            <div class="modal-buttons">
+                <button id="cancelEmergency" class="btn btn-outline">Cancelar</button>
+                <button id="confirmEmergency" class="btn btn-danger">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/emergency.js" type="module"></script>
+</body>
+</html>

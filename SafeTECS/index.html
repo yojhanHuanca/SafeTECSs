@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - SafeTECS</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="assets/img/user-default.png" alt="Foto de perfil" class="profile-pic">
+            <h2>Juan Pérez</h2>
+            <p>ALUMNO-20240001</p>
+        </div>
+        
+        <div class="barcode-section">
+            <h3>Mi Código de Acceso</h3>
+            <svg id="barcode"></svg>
+            <p class="barcode-hint">Presenta este código en los lectores del campus</p>
+        </div>
+        
+        <div class="profile-actions">
+            <button class="btn btn-secondary" id="refreshBarcode">
+                <span class="material-icons">refresh</span>
+                Regenerar Código
+            </button>
+            <button class="btn btn-primary" id="downloadBarcode">
+                <span class="material-icons">download</span>
+                Descargar
+            </button>
+        </div>
+    </div>
+
+    <script src="js/barcode.js"></script>
+</body>
+</html>

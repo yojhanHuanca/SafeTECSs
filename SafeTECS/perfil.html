@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mi Perfil - SafeTECS</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="profile-header">
+        <a href="dashboard.html" class="back-btn">
+            <span class="material-icons">arrow_back</span>
+        </a>
+        <h1>Mi Perfil</h1>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="profile-container">
+        <!-- Sección de Información -->
+        <section class="user-info-section">
+            <div class="user-avatar">
+                <img src="assets/img/user-default.png" alt="Foto de perfil" id="userAvatar">
+                <button class="edit-avatar-btn">
+                    <span class="material-icons">edit</span>
+                </button>
+            </div>
+            
+            <div class="user-details">
+                <h2 id="userName">María González</h2>
+                <p class="user-code" id="userCode">ALUMNO-20230045</p>
+                <p class="user-email" id="userEmail">maria.gonzalez@tecs.edu</p>
+                <p class="user-career" id="userCareer">Ingeniería en Sistemas</p>
+            </div>
+        </section>
+
+        <!-- Código de Barras -->
+        <section class="barcode-section">
+            <div class="section-header">
+                <h2>Mi Código de Acceso</h2>
+                <button id="refreshBarcode" class="icon-btn" aria-label="Actualizar código">
+                    <span class="material-icons">refresh</span>
+                </button>
+            </div>
+            
+            <div class="barcode-container">
+                <svg id="barcode"></svg>
+                <p class="barcode-hint">Presenta este código en los lectores del campus</p>
+            </div>
+            
+            <div class="barcode-actions">
+                <button id="downloadBarcode" class="btn btn-outline">
+                    <span class="material-icons">download</span>
+                    Descargar
+                </button>
+                <button id="shareBarcode" class="btn btn-primary">
+                    <span class="material-icons">share</span>
+                    Compartir
+                </button>
+            </div>
+        </section>
+
+        <!-- Configuración -->
+        <section class="settings-section">
+            <h2>Configuración</h2>
+            <div class="settings-list">
+                <a href="editar-perfil.html" class="setting-item">
+                    <span class="material-icons">person_outline</span>
+                    <span>Editar perfil</span>
+                    <span class="material-icons">chevron_right</span>
+                </a>
+                <a href="cambiar-password.html" class="setting-item">
+                    <span class="material-icons">lock_outline</span>
+                    <span>Cambiar contraseña</span>
+                    <span class="material-icons">chevron_right</span>
+                </a>
+                <a href="notificaciones.html" class="setting-item">
+                    <span class="material-icons">notifications_none</span>
+                    <span>Notificaciones</span>
+                    <span class="material-icons">chevron_right</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/barcode.js" type="module"></script>
+    <script src="js/profile.js" type="module"></script>
+</body>
+</html>

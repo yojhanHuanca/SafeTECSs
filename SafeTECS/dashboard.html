@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard - SafeTECS</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <button class="menu-btn" id="menuBtn">
+            <span class="material-icons">menu</span>
+        </button>
+        <h1 class="header-title">Bienvenido, <span id="userName">María</span></h1>
+        <div class="header-actions">
+            <button class="icon-btn" id="notificationsBtn">
+                <span class="material-icons">notifications</span>
+                <span class="badge">3</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-profile">
+            <img src="assets/img/user-default.png" alt="Usuario" class="profile-img">
+            <div class="profile-info">
+                <h3 id="sidebarUserName">María González</h3>
+                <p id="sidebarUserCode">ALUMNO-20230045</p>
+            </div>
+            <button class="close-btn" id="closeSidebar">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item active">
+                <span class="material-icons">home</span>
+                <span>Inicio</span>
+            </a>
+            <a href="perfil.html" class="nav-item">
+                <span class="material-icons">person</span>
+                <span>Mi Perfil</span>
+            </a>
+            <a href="historial.html" class="nav-item">
+                <span class="material-icons">history</span>
+                <span>Historial</span>
+            </a>
+            <a href="emergencia.html" class="nav-item emergency">
+                <span class="material-icons">emergency</span>
+                <span>Emergencia</span>
+            </a>
+            <button class="nav-item" id="logoutBtn">
+                <span class="material-icons">logout</span>
+                <span>Cerrar Sesión</span>
+            </button>
+        </nav>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Tarjetas de Acción Rápida -->
+        <section class="quick-actions">
+            <h2 class="section-title">Acciones Rápidas</h2>
+            <div class="actions-grid">
+                <a href="registro-entrada.html" class="action-card">
+                    <div class="action-icon bg-primary">
+                        <span class="material-icons">login</span>
+                    </div>
+                    <h3>Registrar Entrada</h3>
+                    <p>Registra tu acceso al campus</p>
+                </a>
+                
+                <a href="registro-salida.html" class="action-card">
+                    <div class="action-icon bg-success">
+                        <span class="material-icons">logout</span>
+                    </div>
+                    <h3>Registrar Salida</h3>
+                    <p>Cuando abandones el campus</p>
+                </a>
+                
+                <a href="perfil.html" class="action-card">
+                    <div class="action-icon bg-warning">
+                        <span class="material-icons">qr_code</span>
+                    </div>
+                    <h3>Mi Código</h3>
+                    <p>Muestra tu código de acceso</p>
+                </a>
+                
+                <a href="emergencia.html" class="action-card">
+                    <div class="action-icon bg-danger">
+                        <span class="material-icons">emergency</span>
+                    </div>
+                    <h3>Botón de Pánico</h3>
+                    <p>Solicita ayuda inmediata</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Últimos Accesos -->
+        <section class="recent-access">
+            <div class="section-header">
+                <h2 class="section-title">Últimos Accesos</h2>
+                <a href="historial.html" class="see-all">Ver todo</a>
+            </div>
+            
+            <div class="access-list">
+                <div class="access-item">
+                    <div class="access-icon success">
+                        <span class="material-icons">login</span>
+                    </div>
+                    <div class="access-info">
+                        <h3>Entrada - Edificio A</h3>
+                        <p>Hoy, 08:45 AM</p>
+                    </div>
+                    <span class="access-status success">✔</span>
+                </div>
+                
+                <!-- Más items de acceso -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Navegación Inferior (Mobile) -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item active">
+            <span class="material-icons">home</span>
+            <span>Inicio</span>
+        </a>
+        <a href="perfil.html" class="nav-item">
+            <span class="material-icons">qr_code</span>
+            <span>Mi Código</span>
+        </a>
+        <a href="emergencia.html" class="nav-item emergency">
+            <span class="material-icons">emergency</span>
+            <span>Emergencia</span>
+        </a>
+        <a href="historial.html" class="nav-item">
+            <span class="material-icons">history</span>
+            <span>Historial</span>
+        </a>
+    </nav>
+
+    <script src="js/dashboard.js" type="module"></script>
+</body>
+</html>

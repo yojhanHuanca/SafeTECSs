@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SafeTECS - Inicio</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-background">
+        <div class="wave-container"></div>
+    </div>
+    
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="logo-container">
+                <img src="assets/img/logo-white.svg" alt="SafeTECS" class="logo">
+                <h1 class="app-title">Control de Acceso</h1>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <div class="input-group floating">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Correo Institucional</label>
+                    <span class="material-icons icon">person</span>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-group floating">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Contraseña</label>
+                    <span class="material-icons icon">lock</span>
+                    <button type="button" class="toggle-pwd" aria-label="Mostrar contraseña">
+                        <span class="material-icons">visibility_off</span>
+                    </button>
+                    <div class="underline"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-rounded">
+                    <span class="btn-text">Ingresar</span>
+                    <div class="spinner"></div>
+                </button>
+
+                <div class="auth-footer">
+                    <p>¿Primera vez aquí? <a href="registro.html">Crea una cuenta</a></p>
+                    <a href="recuperar.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/auth.js" type="module"></script>
+</body>
+</html>
